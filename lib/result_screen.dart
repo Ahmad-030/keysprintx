@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:keysprintx/test_result.dart';
 import 'package:lottie/lottie.dart';
 import 'package:confetti/confetti.dart';
-import '../theme/app_theme.dart';
-import '../models/test_result.dart';
-import '../utils/app_constants.dart';
-import '../widgets/gradient_button.dart';
+import 'app_constants.dart';
+import 'app_theme.dart';
+import 'gradient_button.dart';
 import 'typing_screen.dart';
 import 'home_screen.dart';
 

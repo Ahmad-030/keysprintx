@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../theme/app_theme.dart';
+import 'app_theme.dart';
 
 class StatCard extends StatelessWidget {
   final String value;

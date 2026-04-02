@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Privacy Policy – KeySprintX</title>
+    <style>
+        :root {
+          --primary:  #4A6CF7;
+          --accent:   #06D6A0;
+          --bg:       #F5F7FF;
+          --surface:  #FFFFFF;
+          --text:     #1A1F3C;
+          --mid:      #6B7280;
+          --light:    #B0B7C3;
+          --divider:  #EEF1FF;
+          --radius:   14px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+          font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+          background: var(--bg);
+          color: var(--text);
+          padding: 24px 20px 48px;
+          line-height: 1.7;
+          font-size: 15px;
+        }
+
+        /* ── Header ── */
+        .header {
+          text-align: center;
+          padding: 28px 20px 24px;
+          background: linear-gradient(135deg, var(--primary), #7B93FF);
+          border-radius: var(--radius);
+          margin-bottom: 24px;
+          color: #fff;
+        }
+        .header h1 {
+          font-size: 22px;
+          font-weight: 800;
+          letter-spacing: -0.5px;
+          margin-bottom: 6px;
+        }
+        .header p {
+          font-size: 13px;
+          opacity: 0.85;
+        }
+
+        /* ── Cards ── */
+        .card {
+          background: var(--surface);
+          border-radius: var(--radius);
+          padding: 20px;
+          margin-bottom: 14px;
+          box-shadow: 0 2px 12px rgba(74, 108, 247, 0.06);
+        }
+
+        .card-title {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 10px;
+        }
+        .card-title .icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 17px;
+          flex-shrink: 0;
+        }
+        .card-title h2 {
+          font-size: 15px;
+          font-weight: 700;
+          color: var(--text);
+        }
+
+        .icon-blue   { background: rgba(74, 108, 247, 0.12); }
+        .icon-green  { background: rgba(6, 214, 160, 0.12); }
+        .icon-purple { background: rgba(124, 58, 237, 0.12); }
+        .icon-orange { background: rgba(255, 169, 77, 0.12); }
+        .icon-red    { background: rgba(255, 79, 110, 0.12); }
+
+        p, li { color: var(--mid); font-size: 14px; }
+        ul { padding-left: 18px; }
+        ul li { margin-bottom: 6px; }
+
+        /* ── Highlight box ── */
+        .highlight {
+          background: rgba(74, 108, 247, 0.07);
+          border-left: 3px solid var(--primary);
+          border-radius: 0 10px 10px 0;
+          padding: 12px 16px;
+          margin-top: 10px;
+          font-size: 14px;
+          color: var(--primary);
+          font-weight: 600;
+        }
+
+        /* ── Footer ── */
+        .footer {
+          text-align: center;
+          margin-top: 28px;
+          font-size: 12px;
+          color: var(--light);
+        }
+        .footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>⌨️ KeySprintX</h1>
+    <p>Privacy Policy &nbsp;·&nbsp; Last updated: June 2025</p>
+</div>
+
+<!-- Overview -->
+<div class="card">
+    <div class="card-title">
+        <div class="icon icon-blue">🔒</div>
+        <h2>Our Commitment</h2>
+    </div>
+    <p>
+        KeySprintX is a fully offline typing trainer. We built it with a simple principle:
+        your data stays on your device. We do not collect, transmit, or share any personal
+        information — ever.
+    </p>
+    <div class="highlight">No accounts. No tracking. No ads. No internet required.</div>
+</div>
+
+<!-- Data We Store -->
+<div class="card">
+    <div class="card-title">
+        <div class="icon icon-green">💾</div>
+        <h2>Data Stored on Your Device</h2>
+    </div>
+    <p>All data is stored locally using Android's SharedPreferences and never leaves your device:</p>
+    <ul>
+        <li>Typing test results (WPM, accuracy, mistakes, timestamps)</li>
+        <li>App settings (test duration, difficulty, display preferences)</li>
+        <li>Per-letter mistake counts for the Statistics screen</li>
+    </ul>
+    <p style="margin-top:10px;">
+        You can delete all stored data at any time via <strong>Settings → Clear All History</strong>.
+    </p>
+</div>
+
+<!-- No Internet -->
+<div class="card">
+    <div class="card-title">
+        <div class="icon icon-purple">📡</div>
+        <h2>No Internet Access</h2>
+    </div>
+    <p>
+        KeySprintX does not require an internet connection and makes no network requests.
+        No data is sent to external servers, analytics platforms, or third-party services.
+    </p>
+</div>
+
+<!-- Third Parties -->
+<div class="card">
+    <div class="card-title">
+        <div class="icon icon-orange">🤝</div>
+        <h2>Third-Party Services</h2>
+    </div>
+    <p>
+        This app does not integrate any third-party SDKs for advertising, analytics, crash
+        reporting, or social login. The only external dependency used at runtime is
+        <strong>Google Fonts</strong>, which loads font files bundled within the app package —
+        no runtime network calls are made.
+    </p>
+</div>
+
+<!-- Children -->
+<div class="card">
+    <div class="card-title">
+        <div class="icon icon-red">👶</div>
+        <h2>Children's Privacy</h2>
+    </div>
+    <p>
+        KeySprintX is suitable for all ages. Because we collect no personal information
+        whatsoever, the app complies with COPPA and similar children's privacy regulations
+        by design.
+    </p>
+</div>
+
+<!-- Changes -->
+<div class="card">
+    <div class="card-title">
+        <div class="icon icon-blue">📋</div>
+        <h2>Changes to This Policy</h2>
+    </div>
+    <p>
+        If we ever update this privacy policy, the revised version will be included in the
+        next app update on Google Play. Continued use of the app after an update constitutes
+        acceptance of the revised policy.
+    </p>
+</div>
+
+<!-- Contact -->
+<div class="card">
+    <div class="card-title">
+        <div class="icon icon-green">✉️</div>
+        <h2>Contact</h2>
+    </div>
+    <p>
+        Have a question or concern? Reach out at
+        <a><strong>elginrd1973@gmail.com</strong></a>.
+        We typically respond within a few business days.
+    </p>
+</div>
+
+<div class="footer">
+    <p>© 2025 KeySprintX &nbsp;·&nbsp; All rights reserved</p>
+</div>
+
+</body>
+</html>

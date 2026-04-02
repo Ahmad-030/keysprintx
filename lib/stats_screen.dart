@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:keysprintx/stat_card.dart';
+import 'package:keysprintx/storage_service.dart';
+import 'package:keysprintx/test_result.dart';
 import 'package:lottie/lottie.dart';
-import '../theme/app_theme.dart';
-import '../models/test_result.dart';
-import '../services/storage_service.dart';
-import '../utils/app_constants.dart';
-import '../widgets/stat_card.dart';
+import 'app_constants.dart';
+import 'app_theme.dart';
 
 class StatsScreen extends StatefulWidget {
   const StatsScreen({super.key});

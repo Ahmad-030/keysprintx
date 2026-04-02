@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../theme/app_theme.dart';
-import '../services/storage_service.dart';
-import '../utils/app_constants.dart';
-import '../utils/typing_texts.dart';
+import 'package:keysprintx/storage_service.dart';
+import 'package:keysprintx/typing_texts.dart';
+import 'app_constants.dart';
+import 'app_theme.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});

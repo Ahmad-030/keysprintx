@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../theme/app_theme.dart';
-import '../services/storage_service.dart';
-import '../models/test_result.dart';
-import '../utils/typing_texts.dart';
+import 'package:keysprintx/storage_service.dart';
+import 'package:keysprintx/test_result.dart';
+import 'package:keysprintx/typing_texts.dart';
+import 'app_theme.dart';
 import 'result_screen.dart';
 
 class TypingScreen extends StatefulWidget {

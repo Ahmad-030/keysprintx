@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lottie/lottie.dart';
-import '../theme/app_theme.dart';
-import '../utils/app_constants.dart';
+
+import 'app_constants.dart';
+import 'app_theme.dart';
 import 'privacy_policy_screen.dart';
 
 class AboutScreen extends StatelessWidget {

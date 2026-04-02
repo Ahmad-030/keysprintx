@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:keysprintx/storage_service.dart';
 import 'package:lottie/lottie.dart';
-import '../theme/app_theme.dart';
-import '../utils/app_constants.dart';
-import '../services/storage_service.dart';
-import '../widgets/gradient_button.dart';
+import 'app_constants.dart';
+import 'app_theme.dart';
+import 'gradient_button.dart';
 import 'typing_screen.dart';
 import 'history_screen.dart';
 import 'stats_screen.dart';

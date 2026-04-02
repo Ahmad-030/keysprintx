@@ -1,6 +1,6 @@
 import 'dart:convert';
+import 'package:keysprintx/test_result.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../models/test_result.dart';
 
 class StorageService {
   static const _keyResults   = 'ksx_results';

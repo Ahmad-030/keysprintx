@@ -112,7 +112,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
           _SectionHeader('About'),
           const SizedBox(height: 12),
 
-          _InfoTile(Icons.info_rounded, 'Version', AppConstants.appVersion),
           _InfoTile(Icons.person_rounded, 'Developer', AppConstants.developerName),
           _InfoTile(Icons.email_rounded, 'Contact', AppConstants.developerEmail),
 

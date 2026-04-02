@@ -21,7 +21,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
       ..setNavigationDelegate(NavigationDelegate(
         onPageFinished: (_) => setState(() => _loading = false),
       ))
-      ..loadFlutterAsset('assets/html/privacy_policy.html');
+      ..loadFlutterAsset('assets/privacy_policy.html');
   }
 
   @override

@@ -198,7 +198,7 @@ class _HeroCard extends StatelessWidget {
               children: [
                 Text('Train Your Typing', style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white)),
                 const SizedBox(height: 8),
-                Text('Track WPM, accuracy &\nbecome a typing legend.',
+                Text('Track WPM, accuracy \n& become a typing legend.',
                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.white70, height: 1.5)),
               ],
             ),

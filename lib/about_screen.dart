@@ -24,23 +24,27 @@ class AboutScreen extends StatelessWidget {
               child: Lottie.asset(
                 AppConstants.lottieKeyboard,
                 fit: BoxFit.contain,
-                errorBuilder: (_, __, ___) => const Icon(Icons.keyboard_rounded, size: 100, color: AppTheme.primary),
+                errorBuilder: (_, __, ___) =>
+                const Icon(Icons.keyboard_rounded, size: 100, color: AppTheme.primary),
               ),
             ).animate().scale(duration: 700.ms, curve: Curves.elasticOut),
 
             const SizedBox(height: 12),
 
             ShaderMask(
-              shaderCallback: (b) => const LinearGradient(colors: [AppTheme.primary, AppTheme.accent]).createShader(b),
-              child: Text(AppConstants.appName,
-                  style: Theme.of(context).textTheme.displaySmall!.copyWith(color: Colors.white, fontWeight: FontWeight.w800)),
+              shaderCallback: (b) =>
+                  const LinearGradient(colors: [AppTheme.primary, AppTheme.accent])
+                      .createShader(b),
+              child: Text(
+                AppConstants.appName,
+                style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                    color: Colors.white, fontWeight: FontWeight.w800),
+              ),
             ).animate().fadeIn(delay: 300.ms, duration: 600.ms),
 
-            Text('v${AppConstants.appVersion}',
-                style: Theme.of(context).textTheme.bodySmall!.copyWith(color: AppTheme.textLight))
-                .animate().fadeIn(delay: 400.ms),
 
-            const SizedBox(height: 6),
+
+            const SizedBox(height: 15),
 
             Text(
               'Train your typing speed and accuracy with\nbeautiful analytics and smart feedback.',
@@ -76,7 +80,7 @@ class AboutScreen extends StatelessWidget {
               icon: Icons.emoji_events_rounded,
               title: 'Grade System',
               desc: 'Earn grades from F to S and climb to Legendary status.',
-              color: Color(0xFF7C3AED),
+              color: const Color(0xFF7C3AED),
               delay: 400,
             ),
 
@@ -93,7 +97,12 @@ class AboutScreen extends StatelessWidget {
                   end: Alignment.bottomRight,
                 ),
                 borderRadius: BorderRadius.circular(20),
-                boxShadow: [BoxShadow(color: AppTheme.primary.withOpacity(0.3), blurRadius: 16, offset: const Offset(0, 6))],
+                boxShadow: [
+                  BoxShadow(
+                      color: AppTheme.primary.withOpacity(0.3),
+                      blurRadius: 16,
+                      offset: const Offset(0, 6))
+                ],
               ),
               child: Column(
                 children: [
@@ -103,30 +112,25 @@ class AboutScreen extends StatelessWidget {
                     child: Icon(Icons.person_rounded, size: 32, color: Colors.white),
                   ),
                   const SizedBox(height: 12),
-                  Text('Made with ❤️ by',
-                      style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white70)),
+
                   const SizedBox(height: 4),
                   Text(AppConstants.developerName,
-                      style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white, fontWeight: FontWeight.w800)),
+                      style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.w800)),
                   const SizedBox(height: 4),
                   Text(AppConstants.developerEmail,
-                      style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white70)),
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodySmall!
+                          .copyWith(color: Colors.white70)),
                 ],
               ),
             ).animate().fadeIn(delay: 500.ms, duration: 600.ms).slideY(begin: 0.1, end: 0),
 
             const SizedBox(height: 20),
 
-            // Privacy Policy link
-            TextButton.icon(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const PrivacyPolicyScreen()),
-              ),
-              icon: const Icon(Icons.privacy_tip_outlined),
-              label: const Text('Privacy Policy'),
-              style: TextButton.styleFrom(foregroundColor: AppTheme.primary),
-            ).animate().fadeIn(delay: 700.ms),
+            // ── Privacy Policy button ──────────────────────────────
+            _PrivacyPolicyButton(),
 
             const SizedBox(height: 32),
           ],
@@ -136,12 +140,93 @@ class AboutScreen extends StatelessWidget {
   }
 }
 
+// ── Privacy Policy Button ─────────────────────────────────
+class _PrivacyPolicyButton extends StatelessWidget {
+  const _PrivacyPolicyButton();
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => const PrivacyPolicyScreen()),
+      ),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        decoration: BoxDecoration(
+          color: AppTheme.surface,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: AppTheme.primary.withOpacity(0.18), width: 1.5),
+          boxShadow: [
+            BoxShadow(
+              color: AppTheme.primary.withOpacity(0.06),
+              blurRadius: 12,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            // Icon container
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: AppTheme.primary.withOpacity(0.10),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Icon(Icons.shield_outlined, color: AppTheme.primary, size: 22),
+            ),
+            const SizedBox(width: 14),
+            // Text
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Privacy Policy',
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                      color: AppTheme.primary,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    'How we handle your data',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodySmall!
+                        .copyWith(color: AppTheme.textLight),
+                  ),
+                ],
+              ),
+            ),
+            // Chevron
+            const Icon(Icons.chevron_right_rounded, color: AppTheme.primary, size: 22),
+          ],
+        ),
+      ),
+    )
+        .animate()
+        .fadeIn(delay: 700.ms, duration: 400.ms)
+        .slideY(begin: 0.1, end: 0);
+  }
+}
+
+// ── Feature Card ──────────────────────────────────────────
 class _FeatureCard extends StatelessWidget {
   final IconData icon;
   final String title, desc;
   final Color color;
   final int delay;
-  const _FeatureCard({required this.icon, required this.title, required this.desc, required this.color, required this.delay});
+
+  const _FeatureCard({
+    required this.icon,
+    required this.title,
+    required this.desc,
+    required this.color,
+    required this.delay,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -157,7 +242,8 @@ class _FeatureCard extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(color: color.withOpacity(0.12), borderRadius: BorderRadius.circular(12)),
+            decoration: BoxDecoration(
+                color: color.withOpacity(0.12), borderRadius: BorderRadius.circular(12)),
             child: Icon(icon, color: color, size: 22),
           ),
           const SizedBox(width: 14),
@@ -172,7 +258,10 @@ class _FeatureCard extends StatelessWidget {
           ),
         ],
       ),
-    ).animate(delay: Duration(milliseconds: delay)).fadeIn(duration: 400.ms).slideX(begin: 0.1, end: 0);
+    )
+        .animate(delay: Duration(milliseconds: delay))
+        .fadeIn(duration: 400.ms)
+        .slideX(begin: 0.1, end: 0);
   }
 }
 

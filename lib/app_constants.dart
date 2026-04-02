@@ -1,11 +1,11 @@
 class AppConstants {
-  // Lottie file names (place these in assets/lottie/)
-  static const String lottieKeyboard = 'assets/lottie/keyboard.json';
-  static const String lottieSuccess  = 'assets/lottie/success.json';
-  static const String lottieEmpty    = 'assets/lottie/empty.json';
-  static const String lottieTrophy   = 'assets/lottie/trophy.json';
-  static const String lottieChart    = 'assets/lottie/chart.json';
-  static const String lottieTyping   = 'assets/lottie/typing.json';
+  // Lottie file names (place these in assets/)
+  static const String lottieKeyboard = 'assets/keyboard.json';
+  static const String lottieSuccess  = 'assets/success.json';
+  static const String lottieEmpty    = 'assets/empty.json';
+  static const String lottieTrophy   = 'assets/trophy.json';
+  static const String lottieChart    = 'assets/chart.json';
+  static const String lottieTyping   = 'assets/typinga.json';
 
   // App info
   static const String appName       = 'KeySprintX';
